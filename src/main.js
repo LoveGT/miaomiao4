@@ -3,6 +3,12 @@ import App from './App.vue'
 import router from './routers'
 import store from './stores'
 
+import axios from 'axios'
+Vue.prototype.axios = axios
+
+Vue.filter('setWH',(url,arg)=>{
+	return url.replace(/w\.h/,arg)
+})
 import '@/assets/iconfont/iconfont.css'
 Vue.config.productionTip = false
 
